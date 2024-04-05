@@ -1,4 +1,4 @@
-export const hungerLevels = [1, 2, 3, 4, 5] as const
+export const hungerLevels = [1, 2, 3] as const
 
 export type DefaultSettings = {
   partySize:   number
@@ -17,5 +17,5 @@ export const settingsKeys = {
 
 export const defaultSettings: DefaultSettings = {
   partySize:   1,
-  hungerLevel: 3
+  hungerLevel: 2
 } as const

@@ -1,3 +1,14 @@
 .button {
-  
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 15px;
+  font-family: var(--lucky-guy-font);
+}
+
+.button:hover {
+  background-color: var(--color-secondary-dark);
 }
