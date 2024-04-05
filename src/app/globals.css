@@ -5,6 +5,7 @@
   --color-primary: #935137;
   --color-secondary: #24c2ce;
   --color-secondary-dark: #0fa7b2;
+  --color-body-bg: #103349;
 }
 
 * {
@@ -21,7 +22,9 @@ body {
 
 body {
   color: white;
-  background: url('/images/bg-cookies-ai.jpg');
+  /* background: url('/images/bg-cookies-ai.jpg'); */
+  background-image: url('/images/bg-cookies-ai.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75));
+    background-blend-mode: overlay;
   background-size: cover;
   font-family: var(--font-luckiest-guy);
   font-size: 24px;

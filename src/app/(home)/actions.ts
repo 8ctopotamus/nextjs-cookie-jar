@@ -1,9 +1,10 @@
-'use server'
 
 import { cookies } from 'next/headers'
-import { AllSettings, defaultSettings, settingsKeys, type DefaultSettings } from '@/lib'
+import { settingsKeys } from '@/lib'
 
 export async function calculateDelivery (formData: FormData) {
+  'use server'
+  
   const cookiesStore = cookies()
 
   const rawFormData = {
@@ -11,8 +12,6 @@ export async function calculateDelivery (formData: FormData) {
     [settingsKeys.hungerLevel]: formData.get(settingsKeys.hungerLevel),
     [settingsKeys.zipCode]: formData.get(settingsKeys.zipCode)
   }
-
-  console.log(rawFormData)
 
   // update cookies
   for (const key of Object.values(settingsKeys)) {

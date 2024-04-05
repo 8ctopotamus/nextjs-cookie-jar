@@ -6,12 +6,14 @@ import { Card, CookieDeliveryCalculator } from "@/components"
 import styles from './page.module.css'
 
 export default function Home() {
-  
   // load saved settings from cookies
   const cookiesStore = cookies()
-  const partySize =  +(cookiesStore.get(settingsKeys.partySize)?.value ?? defaultSettings.partySize)
-  const hungerLevel = +(cookiesStore.get(settingsKeys.hungerLevel)?.value ?? defaultSettings.hungerLevel) as DefaultSettings['hungerLevel']
-  const zipCode =  +(cookiesStore.get(settingsKeys.zipCode)?.value ?? 0)
+  
+  const cookieData = {
+    partySize: +(cookiesStore.get(settingsKeys.partySize)?.value ?? defaultSettings.partySize),
+    hungerLevel: +(cookiesStore.get(settingsKeys.hungerLevel)?.value ?? defaultSettings.hungerLevel) as DefaultSettings['hungerLevel'],
+    zipCode: +(cookiesStore.get(settingsKeys.zipCode)?.value ?? ''),
+  }
 
   return (
     <main className="main">
@@ -21,15 +23,14 @@ export default function Home() {
           <p className={styles.description}>A sandbox for testing NextJS Cookies</p>
           <Card title='Calculate Cookie Delivery'>
             <CookieDeliveryCalculator 
-              partySize={partySize}
-              hungerLevel={hungerLevel}
-              zipCode={zipCode}
+              {...cookieData}
               formAction={calculateDelivery}
             />
           </Card>
         </div>
       </div>
+      <pre>{JSON.stringify(cookieData, null, 2)}</pre>
       <p>This website uses cookies, obviously.</p>
     </main>
-  );
+  )
 }
