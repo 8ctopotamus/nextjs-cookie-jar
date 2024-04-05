@@ -1,8 +1,8 @@
-import { type AllSettings } from "./constants"
-
-const PRICE_PER_COOKIE = 5 
-
-const OUR_ZIPCODE = 84938
+import { 
+  OUR_ZIPCODE,
+  PRICE_PER_COOKIE,
+  type AllSettings 
+} from "./constants"
 
 const _getDeliveryCost = (zipCode: number): number => {
   const distance = Math.abs(OUR_ZIPCODE - zipCode)
