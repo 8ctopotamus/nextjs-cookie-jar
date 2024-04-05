@@ -1,2 +1,2 @@
 export * from './button'
-export * from './cookie-distribution-calc'
+export * from './cookie-delivery-calc'
