@@ -1,6 +1,11 @@
+import { cookies } from 'next/headers'
+
 import { FakeDeliveryCalc } from "@/components"
 
 export default function Home() {
+  const cookiesStore = cookies()
+  // console.log(cookiesStore)
+
   return (
     <main className="main">
       <div className="center">
