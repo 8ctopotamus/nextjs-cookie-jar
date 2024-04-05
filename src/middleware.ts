@@ -3,12 +3,15 @@ import type { NextRequest } from "next/server"
 
 export function middleware(req: NextRequest) {
   // console.log('pathname:', req.nextUrl.pathname)
+  const res = NextResponse.next()
+  
   
   const cookie = req.cookies.get('userZip')
 
+
   console.log('saved cookie: ', cookie)
 
-  return NextResponse.next()
+  return 
 }
 
 // @key - we'd need matchers for the routes where we want to use cookies /shop/:path*, /inventory/:path*, /land-homes/:path*, etc
