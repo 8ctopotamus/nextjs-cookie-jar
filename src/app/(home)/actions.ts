@@ -1,11 +1,13 @@
 'use server'
 
 import { cookies } from 'next/headers'
-import { settingsKeys, ONE_YEAR_IN_MILLISECONDS } from '@/lib'
+import { settingsKeys, ONE_YEAR_IN_MILLISECONDS, sleep } from '@/lib'
 
 
 export async function calculateDelivery (formData: FormData) {
   
+  await sleep(1200) // artificial delay
+
   const cookiesStore = cookies()
 
   const rawFormData = {

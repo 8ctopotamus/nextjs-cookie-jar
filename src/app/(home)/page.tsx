@@ -3,6 +3,7 @@ import { defaultSettings, settingsKeys, type DefaultSettings } from '@/lib'
 import { Card, CookieDeliveryCalculator } from "@/components"
 
 import { calculateDelivery } from './actions'
+import { calculateCookiePrice } from '@/lib'
 
 import styles from './page.module.css'
 
@@ -16,6 +17,8 @@ export default function Home() {
     zipCode: +(cookiesStore.get(settingsKeys.zipCode)?.value ?? ''),
   }
 
+  const result = calculateCookiePrice(cookieData)
+
   return (
     <main className="main">
       <div className="center">
@@ -26,6 +29,7 @@ export default function Home() {
             <CookieDeliveryCalculator 
               {...cookieData}
               formAction={calculateDelivery}
+              result={result}
             />
           </Card>
         </div>

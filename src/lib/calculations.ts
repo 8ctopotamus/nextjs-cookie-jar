@@ -1,6 +1,7 @@
 import { type AllSettings } from "./constants"
 
 const PRICE_PER_COOKIE = 5 
+
 const OUR_ZIPCODE = 84938
 
 const _getDeliveryCost = (zipCode: number): number => {

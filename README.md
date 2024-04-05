@@ -1,8 +1,17 @@
 # NextJS Cookie Jar
 
+## Resources
+
 * https://nextjs.org/docs/app/api-reference/functions/cookies
 * https://nextjs.org/docs/app/building-your-application/routing/middleware#using-cookies
 * https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#cookies
+
+
+## More Questions for appying this to FMMH v3 (@8ctopotamus and @keyhoffman)
+
+* How does this play into filter provider?
+* Dynamic Form Options based on selections
+* Do we still need Zustand?
 
 ---
 
