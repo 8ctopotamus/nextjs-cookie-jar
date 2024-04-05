@@ -1,16 +1,21 @@
-const hungerLevels = [1, 2, 3, 4, 5] as const
+export const hungerLevels = [1, 2, 3, 4, 5] as const
 
-type DefaultSettings = {
-  partySize: number
+export type DefaultSettings = {
+  partySize:   number
   hungerLevel: typeof hungerLevels[number]
 }
 
-export const settingsKeys = {
-  partySize: 'partySize',
-  hungerLevel: 'hungerLevel'
+export type AllSettings = DefaultSettings & {
+  zipCode: number
 }
 
+export const settingsKeys = {
+  partySize:   'partySize',
+  hungerLevel: 'hungerLevel',
+  zipCode:     'zipCode'
+} as const
+
 export const defaultSettings: DefaultSettings = {
-  partySize: 1,
+  partySize:   1,
   hungerLevel: 3
-}
+} as const
