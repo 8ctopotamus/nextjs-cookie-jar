@@ -7,13 +7,17 @@ import { calculateCookiePrice } from "@/lib"
 
 import styles from './styles.module.css'
 
-export const Results: FC<AllSettings> = () => {
+export const Results: FC<AllSettings> = ({
+  partySize,
+  hungerLevel,
+  zipCode
+}) => {
   const { pending } = useFormStatus()
 
   const result = calculateCookiePrice({
-    partySize: 12,
-    hungerLevel: 2,
-    zipCode: 0,
+    partySize,
+    hungerLevel,
+    zipCode,
   })
 
   return (

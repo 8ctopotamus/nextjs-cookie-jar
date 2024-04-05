@@ -1,3 +1,5 @@
+export const ONE_YEAR_IN_MILLISECONDS = 31557600000
+
 export const hungerLevels = [1, 2, 3] as const
 
 export type DefaultSettings = {

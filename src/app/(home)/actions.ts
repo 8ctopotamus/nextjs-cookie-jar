@@ -1,7 +1,8 @@
 'use server'
 
 import { cookies } from 'next/headers'
-import { settingsKeys } from '@/lib'
+import { settingsKeys, ONE_YEAR_IN_MILLISECONDS } from '@/lib'
+
 
 export async function calculateDelivery (formData: FormData) {
   
@@ -16,7 +17,11 @@ export async function calculateDelivery (formData: FormData) {
   // update cookies
   for (const key of Object.values(settingsKeys)) {
     if (rawFormData[key]) {
-      cookiesStore.set(key, rawFormData[key] as string)
+      cookiesStore.set({
+        name: key, 
+        value: rawFormData[key] as string, 
+        expires: new Date().getTime() + ONE_YEAR_IN_MILLISECONDS
+      })
     }
   }
 }
