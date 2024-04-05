@@ -24,6 +24,7 @@ body {
   background: url('/images/bg-cookies-ai.jpg');
   background-size: cover;
   font-family: var(--font-luckiest-guy);
+  font-size: 24px;
 }
 
 .main {
@@ -33,32 +34,6 @@ body {
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: var(--color-primary);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
 }
 
 .center {

@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers'
 import { defaultSettings, settingsKeys, type DefaultSettings } from '@/lib'
-import { CookieDeliveryCalculator } from "@/components"
+
+import { Card, CookieDeliveryCalculator } from "@/components"
 
 import styles from './page.module.css'
 
@@ -27,15 +28,17 @@ export default function Home() {
   return (
     <main className="main">
       <div className="center">
-        <div className='card'>
-          <h1>NextJS Cookie Jar</h1>
+        <div>
+          <h1 className={styles.h1}>🍪 NextJS Cookie Jar 🍪</h1>
           <p className={styles.description}>A sandbox for testing NextJS Cookies</p>
-          <CookieDeliveryCalculator 
-            partySize={partySize}
-            hungerLevel={hungerLevel}
-            zipCode={zipCode}
-            formAction={calculateDelivery}
-          />
+          <Card title='Calculate Cookie Delivery'>
+            <CookieDeliveryCalculator 
+              partySize={partySize}
+              hungerLevel={hungerLevel}
+              zipCode={zipCode}
+              formAction={calculateDelivery}
+            />
+          </Card>
         </div>
       </div>
     </main>

@@ -1,0 +1,12 @@
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.cardTitle {
+  margin-bottom: 0.7rem;
+}
+

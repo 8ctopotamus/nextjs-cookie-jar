@@ -16,8 +16,6 @@ export const CookieDeliveryCalculator: FC<Props> = ({
 }) => {
   return (
     <>
-      <p>Calculate your cookie delivery.</p>
-
       <form action={formAction} className={styles.form}>
         <div className={styles.formRow}>
           <label htmlFor={settingsKeys.partySize}>Party Size*</label>
