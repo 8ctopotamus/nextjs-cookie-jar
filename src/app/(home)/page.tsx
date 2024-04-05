@@ -1,7 +1,8 @@
 import { cookies } from 'next/headers'
 import { defaultSettings, settingsKeys, type DefaultSettings } from '@/lib'
-import { calculateDelivery } from './actions'
 import { Card, CookieDeliveryCalculator } from "@/components"
+
+import { calculateDelivery } from './actions'
 
 import styles from './page.module.css'
 

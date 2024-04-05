@@ -1,9 +1,9 @@
+'use server'
 
 import { cookies } from 'next/headers'
 import { settingsKeys } from '@/lib'
 
 export async function calculateDelivery (formData: FormData) {
-  'use server'
   
   const cookiesStore = cookies()
 
@@ -19,7 +19,4 @@ export async function calculateDelivery (formData: FormData) {
       cookiesStore.set(key, rawFormData[key] as string)
     }
   }
-
-  // mutate data
-  // revalidate cache
 }

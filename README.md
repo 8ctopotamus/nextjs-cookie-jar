@@ -1,3 +1,11 @@
+# NextJS Cookie Jar
+
+* https://nextjs.org/docs/app/api-reference/functions/cookies
+* https://nextjs.org/docs/app/building-your-application/routing/middleware#using-cookies
+* https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#cookies
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
