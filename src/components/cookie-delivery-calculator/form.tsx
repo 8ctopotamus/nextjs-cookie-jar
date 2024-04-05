@@ -27,8 +27,11 @@ export const CookieDeliveryCalculator: FC<Props> = ({
         </div>
         
         <div className={styles.formRow}>
-          <label htmlFor="hungerLevel">Hunger Level*</label>
-          <select defaultValue={hungerLevel ?? defaultSettings.partySize}>
+          <label htmlFor={settingsKeys.hungerLevel}>Hunger Level*</label>
+          <select 
+            name={settingsKeys.hungerLevel}
+            defaultValue={hungerLevel ?? defaultSettings.hungerLevel}
+          >
             {hungerLevels.map(level => (
               <option value={level} key={level}>{level}</option>
             ))}

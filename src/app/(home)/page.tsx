@@ -1,24 +1,12 @@
 import { cookies } from 'next/headers'
 import { defaultSettings, settingsKeys, type DefaultSettings } from '@/lib'
-
+import { calculateDelivery } from './actions'
 import { Card, CookieDeliveryCalculator } from "@/components"
 
 import styles from './page.module.css'
 
 export default function Home() {
-  async function calculateDelivery (formData: FormData) {
-    'use server'
-
-    const rawFormData = {
-      [settingsKeys.partySize]: formData.get(settingsKeys.partySize),
-      [settingsKeys.hungerLevel]: formData.get(settingsKeys.hungerLevel),
-      [settingsKeys.zipCode]: formData.get(settingsKeys.zipCode)
-    }
-
-    // mutate data
-    // revalidate cache
-  }
-
+  
   // load saved settings from cookies
   const cookiesStore = cookies()
   const partySize =  +(cookiesStore.get(settingsKeys.partySize)?.value ?? defaultSettings.partySize)
@@ -41,6 +29,7 @@ export default function Home() {
           </Card>
         </div>
       </div>
+      <p>This website uses cookies, obviously.</p>
     </main>
   );
 }

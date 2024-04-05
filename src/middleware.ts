@@ -6,24 +6,24 @@ export function middleware(req: NextRequest) {
 
   const res = NextResponse.next()
 
-  const cookies = req.cookies.getAll()
+  // const cookies = req.cookies.getAll()
 
-  const hasSavedPartySize = settingsKeys.partySize in cookies
-  const hasSavedHungerLevel = settingsKeys.hungerLevel in cookies
+  // const hasSavedPartySize = settingsKeys.partySize in cookies
+  // const hasSavedHungerLevel = settingsKeys.hungerLevel in cookies
 
-  if (!hasSavedPartySize) {
-    res.cookies.set(
-      settingsKeys.partySize, 
-      JSON.stringify(defaultSettings.partySize)
-    )
-  }
+  // if (!hasSavedPartySize) {
+  //   res.cookies.set(
+  //     settingsKeys.partySize, 
+  //     JSON.stringify(defaultSettings.partySize)
+  //   )
+  // }
 
-  if (!hasSavedHungerLevel) {
-    res.cookies.set(
-      settingsKeys.hungerLevel, 
-      JSON.stringify(defaultSettings.hungerLevel)
-    )
-  }
+  // if (!hasSavedHungerLevel) {
+  //   res.cookies.set(
+  //     settingsKeys.hungerLevel, 
+  //     JSON.stringify(defaultSettings.hungerLevel)
+  //   )
+  // }
 
   return res
 }
